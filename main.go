@@ -30,4 +30,8 @@ func main() {
 	u.UpdateUser()
 	u, _ = models.GetUser(1)
 	fmt.Println(u)
+
+	u.DeleteUser()
+	u, _ = models.GetUser(1)
+	fmt.Println(u) // {0     0001-01-01 00:00:00 +0000 UTC}
 }
