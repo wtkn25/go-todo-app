@@ -17,7 +17,7 @@ const (
 )
 
 func init() {
-	Db, err := sql.Open(config.Config.SQLDriver, config.Config.DbName)
+	Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -27,7 +27,7 @@ func init() {
 		uuid STRING NOT NULL UNIQUE,
 		name STRING,
 		email STRING,
-		password SRING,
+		password STRING,
 		created_at DATETIME)`, tableNameUser)
 
 	Db.Exec(cmdU)
